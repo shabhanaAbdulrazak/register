@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var initial=1000;
+      function withdraw(){
+        if(initial<=500)
+        document.getElementById('para').innerHTML="";
+        else{
+            var amount=Number( document.getElementById('i1').value);
+            initial-=amount;
+            document.getElementById('para').innerHTML=initial;
+        }
+
+      }
+      function deposit(){
+        var a=Number(document.getElementById('i1').value);
+            initial+=a;
+            document.getElementById('para').innerHTML=initial;
+      }
+    </script>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <input type="text" name="input" id="i1">
+    <!-- <input type="text" id="i2"> -->
+    <button onclick="deposit()">deposit</button>
+    <button onclick="withdraw()">withdraw</button>
+    <p id="para">1000</p>
+    <!-- <div id="res"></div> -->
+</body>
+</html>
